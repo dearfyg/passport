@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post("/mobileLogin","Api\ApiController@login"); //登录
+Route::post("/mobileReg","Api\ApiController@reg"); //注册
+Route::get("/login","Login\ApiController@auth_login"); //判断是否登录

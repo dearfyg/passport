@@ -22,6 +22,3 @@ Route::prefix("/web")->middleware("check_login")->Group(function(){
     Route::post("/reg/gain","Login\RegisterController@gain"); //获取验证码
     Route::post("/reg/code","Login\RegisterController@code");   //验证验证码
 });
-Route::prefix("/api")->Group(function(){
-    Route::get("/login","Login\ApiController@auth_login"); //登录
-});
